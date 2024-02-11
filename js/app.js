@@ -6,29 +6,29 @@ formulario.addEventListener('submit', async(e) => {
 	e.preventDefault();
 
 // Escribir Filas
-	// try {
-	// 	const respuesta = await fetch('https://sheet.best/api/sheets/e1bf0443-8bca-42a4-afc2-4f36b4e8fbd5', {
-	// 		method: 'POST',
-	// 		mode: 'cors',
-	// 		headers: {
-	// 			'Content-Type': 'application/json'
-	// 		},
-	// 		body: JSON.stringify({
-	// 			"Nombre": formulario.nombre.value,
-	// 			"Correo": formulario.correo.value,
-	// 			"Telefono": formulario.telefono.value
-	// 		})
-	// 	});
+	try {
+		const respuesta = await fetch('https://sheet.best/api/sheets/c886b66e-df88-4a1d-bd68-229b550272c3', {
+			method: 'POST',
+			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				"ID": formulario.ID.value,
+				"Nombre": formulario.Nombre.value,
+				"Lugar": formulario.Lugar.value
+			})
+		});
 
-	// 	const contenido = await respuesta.json();
-	// 	console.log(contenido);
-	// } catch(error){
-	// 	console.log(error);
-	// }
+		const contenido = await respuesta.json();
+		console.log(contenido);
+	} catch(error){
+		console.log(error);
+	}
 
 // Leer Filas
 	// try {
-	// 	const respuesta = await fetch('https://sheet.best/api/sheets/e1bf0443-8bca-42a4-afc2-4f36b4e8fbd5');
+	// 	const respuesta = await fetch('https://sheet.best/api/sheets/c886b66e-df88-4a1d-bd68-229b550272c3');
 
 	// 	const contenido = await respuesta.json();
 	// 	console.log(contenido);
@@ -39,7 +39,7 @@ formulario.addEventListener('submit', async(e) => {
 
 // Eliminar Filas
 	// try {
-	// 	const respuesta = await fetch('https://sheet.best/api/sheets/e1bf0443-8bca-42a4-afc2-4f36b4e8fbd5/0', {
+	// 	const respuesta = await fetch('https://sheet.best/api/sheets/c886b66e-df88-4a1d-bd68-229b550272c3/0', {
 	// 		method: 'DELETE'
 	// 	});
 
@@ -51,25 +51,25 @@ formulario.addEventListener('submit', async(e) => {
 
 
 // Actualizar Filas
-	try {
-		const respuesta = await fetch('https://sheet.best/api/sheets/e1bf0443-8bca-42a4-afc2-4f36b4e8fbd5/3', {
-			method: 'PATCH',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				"Telefono": "000 000 000"
-			})
-		});
+	// try {
+	// 	const respuesta = await fetch('https://sheet.best/api/sheets/c886b66e-df88-4a1d-bd68-229b550272c3/3', {
+	// 		method: 'PATCH',
+	// 		mode: 'cors',
+	// 		headers: {
+	// 			'Content-Type': 'application/json'
+	// 		},
+	// 		body: JSON.stringify({
+	// 			"Telefono": "000 000 000"
+	// 		})
+	// 	});
 
-		const contenido = await respuesta.json();
-		console.log(contenido);
-	} catch(error){
-		console.log(error);
-	}
+	// 	const contenido = await respuesta.json();
+	// 	console.log(contenido);
+	// } catch(error){
+	// 	console.log(error);
+	// }
 
 
-	// registro.classList.remove('activo');
-	// exito.classList.add('activo');
+	registro.classList.remove('activo');
+	exito.classList.add('activo');
 });
